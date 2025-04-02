@@ -1,0 +1,42 @@
+@use "mixins" as mixins;
+
+.header {
+  color: var(--light);
+  background-color: var(--secondary);
+  padding-block: 1.25rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+
+  & > .container,
+  &-start,
+  &-end,
+  &-nav,
+  &-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  > .container {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &-end,
+  &-nav,
+  &-actions {
+
+    .btn {
+      --_color: var(--light)
+    }
+  }
+
+  .btn-menu {
+
+    @include mixins.breakpoint-up(lg) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Главная страница'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Главная страница'})
+
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <main class="main">
+      <div class="section-container">
+        <section class="section hero">
+          <div class="container-lg">
+            <div class="hero-body">
+              <div class="hero-content">
+                <h2 class="h1 hero-title">
+                  Контактный центр 24
+                </h2>
+                <p class="hero-description">
+                  Аварийно-диспетчерская служба для вашей управляющей компании
+                </p>
+
+                <button type="button" class="btn btn-lg btn-dark hero-button">
+                  Подключить
+                </button>
+              </div>
+
+              <div class="hero-relative">
+                <div class="hero-picture">
+                  <picture>
+                    <source srcset="./img/hero/image.webp" type="image/webp">
+                    <img loading="lazy" src="./img/hero/image.png" class="image" width="518" height="514" alt="Картинка">
+                  </picture>
+                </div>
+
+                <div class="hero-users">
+                  <div class="hero-user">
+                    <div class="hero-user-body">
+                      <div class="hero-user-picture">
+                        <picture>
+                          <source srcset="./img/hero/user-1.webp" type="image/webp">
+                          <img loading="lazy" src="./img/hero/user-1.png" class="image" width="28" height="28" alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="hero-user-placeholder"></div>
+                    </div>
+                    <div class="hero-user-status"></div>
+                  </div>
+
+                  <div class="hero-user">
+                    <div class="hero-user-body">
+                      <div class="hero-user-picture">
+                        <picture>
+                          <source srcset="./img/hero/user-2.webp" type="image/webp">
+                          <img loading="lazy" src="./img/hero/user-2.png" class="image" width="28" height="28" alt="Картинка">
+                        </picture>
+                      </div>
+                      <div class="hero-user-placeholder"></div>
+                    </div>
+                    <div class="hero-user-status"></div>
+                  </div>
+                </div>
+
+                <div class="hero-emoji">
+                  <div class="hero-emoji-item">
+                    <span class="hero-emoji-header">😍</span>
+                    <span class="hero-emoji-body">98%</span>
+                  </div>
+                  <div class="hero-emoji-item">
+                    <span class="hero-emoji-header">😡</span>
+                    <span class="hero-emoji-body">2%</span>
+                  </div>
+                </div>
+
+                <div class="hero-messages">
+                  <div class="hero-message">
+                    Принимаем звонки
+                  </div>
+                  <div class="hero-message">
+                    Фиксируем обращения
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section rules">
+          <div class="container">
+            <div class="rules-main">
+              <h2 class="rules-title">
+                Работаем согласно постановлению правительства №331
+              </h2>
+
+              <div class="rules-body">
+                <div class="rule">
+                  Круглосуточно принимаем  входящие обращения от ваших жителей.
+                </div>
+                <div class="rule">
+                  Передаем заявки в работу вашим исполнителям с учетом загруженности и графика.
+                </div>
+                <div class="rule">
+                  Отслеживаем исполнение, собираем обратную связь, а вам направляем отчеты.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

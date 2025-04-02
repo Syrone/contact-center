@@ -1,0 +1,39 @@
+<header class="header">
+  <div class="container">
+    <div class="header-start">
+      @include('logo.html')
+
+      <nav class="header-nav"
+        data-transfer-origin="header-nav"
+        data-transfer-breakpoint="991.98">
+        <a href="#" class="btn">О проекте</a>
+        <a href="#" class="btn">Сервисы ЖКХ</a>
+        <a href="#" class="btn">Тарифы</a>
+      </nav>
+    </div>
+
+    <div class="header-end">
+      <div class="header-actions"
+        data-transfer-origin="header-actions"
+        data-transfer-breakpoint="991.98">
+        <a href="tel:+84952344567" class="btn btn-phone">
+          8 (495) 234-45-67
+        </a>
+
+        <button type="button" class="btn btn-base btn-dark">
+          Подключить
+        </button>
+      </div>
+
+      <button class="btn btn-icon btn-menu"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvas-menu">
+        <span class="icon">
+          <svg>
+            <use xlink:href="img/icons/menu.svg#svg-menu"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>

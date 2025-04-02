@@ -1,0 +1,50 @@
+@use "mixins" as mixins;
+
+:root {
+  // base
+  --font-family: "Inter", sans-serif;
+  --content-width: 1200px;
+  --container-offset: 1.25rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-width-lg: calc(992px + (var(--container-offset) * 2));
+
+  // sizes
+  --fs-base: .875rem;
+  --fs-lg: 1rem;
+  --fs-xl: 1.25rem;
+  --fw-base: 500;
+  --lh-base: normal;
+
+  // colors
+  --title-color: #000;
+  --text-color: #333;
+  --primary: orange;
+  --secondary: #7f42e1;
+  --dark: #000;
+  --light: #fff;
+  --gray: #808080;
+  --gray-200: #ccc;
+
+  // backgrounds
+  --body-bg: #fff;
+
+  // radius
+  --rounded: 1rem;
+
+  // shadows
+  --shadow: 0 0 .625rem .125rem rgba(0,0,0,0.375);
+
+  // transitions
+  --transition-duration: 300ms;
+  --transition-timing-function: ease-in-out;
+}
+
+@include mixins.breakpoint-up(lg) {
+
+  :root {
+    --fs-base: 1rem;
+    --fs-lg: 1.25rem;
+    --fs-xl: 1.5rem;
+  }
+
+}

@@ -1,0 +1,13 @@
+.logo {
+  --_width: 2.125rem;
+  --_height: auto;
+
+  flex-shrink: 0;
+
+  .image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+}
