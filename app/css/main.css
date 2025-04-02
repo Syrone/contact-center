@@ -578,15 +578,11 @@ p + p {
   padding: 1.25rem 1rem;
 }
 .hero-user:first-child {
-  -webkit-transform: translateX(-0.875rem);
-  -ms-transform: translateX(-0.875rem);
-  transform: translateX(-0.875rem);
+  margin-left: -0.875rem;
 }
 @media (min-width: 991.98px) {
   .hero-user:first-child {
-    -webkit-transform: translateX(-1.25rem);
-    -ms-transform: translateX(-1.25rem);
-    transform: translateX(-1.25rem);
+    margin-left: -1.25rem;
   }
 }
 .hero-user:first-child .hero-user-picture {
@@ -646,9 +642,6 @@ p + p {
   padding: 1rem 1.5rem;
   top: 50%;
   left: -1rem;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 @media (min-width: 575.98px) {
   .hero-emoji {
@@ -688,9 +681,7 @@ p + p {
   padding: 1.25rem 1.5rem;
 }
 .hero-message:first-child {
-  -webkit-transform: translateX(3rem);
-  -ms-transform: translateX(3rem);
-  transform: translateX(3rem);
+  margin-inline: 3rem -3rem;
 }
 
 .rules {
