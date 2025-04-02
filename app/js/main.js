@@ -1713,6 +1713,7 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('load', () => {
   aos__WEBPACK_IMPORTED_MODULE_0__.init({
     easing: 'ease-in-out',
+    offset: 40,
     once: true,
     disableMutationObserver: true
   });
