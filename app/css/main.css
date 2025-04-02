@@ -384,7 +384,7 @@ p + p {
 
 .btn-base {
   --_height: 2.5rem;
-  --_fw: 600;
+  --_fw: 500;
   --_rounded: .625rem;
   --_padding: .25rem 1rem;
 }
@@ -392,7 +392,7 @@ p + p {
 .btn-lg {
   --_height: 2.5rem;
   --_fs: 1rem;
-  --_fw: 600;
+  --_fw: 500;
   --_rounded: .625rem;
   --_padding: .25rem 1rem;
 }
@@ -711,7 +711,7 @@ p + p {
 }
 .rules-title {
   font-size: var(--fs-lg);
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
 }
 .rules-body {
