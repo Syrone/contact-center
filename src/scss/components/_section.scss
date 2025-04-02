@@ -1,5 +1,10 @@
 @use "mixins" as mixins;
 
+.section-container {
+  overflow: hidden;
+  position: relative;
+}
+
 .section {
   padding-bottom: 5rem;
 

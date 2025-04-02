@@ -1710,9 +1710,13 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
 
-aos__WEBPACK_IMPORTED_MODULE_0__.init({
-  startEvent: 'load',
-  easing: 'ease-in-out'
+window.addEventListener('load', () => {
+  aos__WEBPACK_IMPORTED_MODULE_0__.init({
+    easing: 'ease-in-out',
+    once: true,
+    disableMutationObserver: true
+  });
+  setTimeout(() => window.scrollTo(0, 0));
 });
 
 /***/ }),

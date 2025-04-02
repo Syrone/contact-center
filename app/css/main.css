@@ -7,7 +7,7 @@
   --fs-base: .875rem;
   --fs-lg: 1rem;
   --fs-xl: 1.25rem;
-  --fw-base: 500;
+  --fw-base: 400;
   --lh-base: normal;
   --title-color: #000;
   --text-color: #333;
@@ -33,6 +33,13 @@
 }
 @font-face {
   font-family: "Inter";
+  src: url("../fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
   src: url("../fonts/Inter-Medium.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
@@ -55,7 +62,6 @@
 .page {
   height: 100%;
   -webkit-text-size-adjust: 100%;
-  scroll-behavior: smooth;
 }
 
 .page-body {
@@ -187,6 +193,11 @@ p + p {
   max-width: var(--container-width-lg);
 }
 
+.section-container {
+  overflow: hidden;
+  position: relative;
+}
+
 .section {
   padding-bottom: 5rem;
 }
@@ -253,7 +264,7 @@ p + p {
   --_width: initial;
   --_height: initial;
   --_fs: var(--fs-base);
-  --_fw: 500;
+  --_fw: 400;
   --_lh: normal;
   --_ls: normal;
   --_color: var(--text-color);
@@ -723,6 +734,7 @@ p + p {
 
 .rule {
   font-size: var(--fs-lg);
+  font-weight: 600;
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 0.75rem;
   padding: 1.75rem 1.25rem;

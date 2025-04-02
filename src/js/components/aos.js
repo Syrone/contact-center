@@ -1,6 +1,11 @@
 import AOS from 'aos'
 
-AOS.init({
-  startEvent: 'load',
-  easing: 'ease-in-out',
+window.addEventListener('load', () => {
+  AOS.init({
+    easing: 'ease-in-out',
+    once: true,
+    disableMutationObserver: true
+  })
+
+  setTimeout(() => window.scrollTo(0, 0))
 })
