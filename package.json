@@ -64,6 +64,7 @@
     "inputmask": "^5.0.8",
     "just-validate": "^4.3.0",
     "rellax": "^1.12.1",
+    "scrollreveal": "^4.0.9",
     "simplebar": "^6.2.5",
     "swiped-events": "^1.1.9",
     "swiper": "^11.1.1"

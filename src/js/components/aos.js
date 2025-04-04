@@ -1,14 +1,27 @@
-import AOS from 'aos'
+import ScrollReveal from 'scrollreveal'
 
-window.addEventListener('load', () => {
-  AOS.init({
-    easing: 'ease-in-out',
-    offset: 40,
-    once: true,
-    mirror: true,
-  })
+const sr = ScrollReveal()
 
-  setTimeout(() => {
-    window.scrollTo(0, 0)
-  }, 10)
+document.querySelectorAll('[data-animation]').forEach(el => {
+  const config = {
+    duration: 500,
+    delay: 0,
+    origin: 'bottom',
+    distance: '40px'
+  }
+
+  if (el.dataset.animationDuration) {
+    config.duration = parseInt(el.dataset.animationDuration, 10)
+  }
+  if (el.dataset.animationDelay) {
+    config.delay = parseInt(el.dataset.animationDelay, 10)
+  }
+  if (el.dataset.animation) {
+    config.origin = el.dataset.animation
+  }
+  if (el.dataset.animationDistance) {
+    config.distance = el.dataset.animationDistance
+  }
+
+  sr.reveal(el, config)
 })

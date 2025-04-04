@@ -117,6 +117,15 @@
   flex: 1;
 }
 
+[data-animation] {
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -574,7 +583,7 @@ textarea {
 }
 
 .logo {
-  --_width: 2.125rem;
+  --_width: 3rem;
   --_height: auto;
   -ms-flex-negative: 0;
   flex-shrink: 0;

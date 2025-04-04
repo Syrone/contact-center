@@ -4,6 +4,7 @@
 @use "settings";
 
 // подключения компонентов страницы
+@use "./components/animation";
 @use "./components/utilities";
 @use "./components/typography";
 @use "./components/containers";
