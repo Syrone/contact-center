@@ -1,0 +1,62 @@
+@use "mixins" as mixins;
+
+.callback {
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    color: var(--light);
+    background-color: var(--secondary);
+    border-radius: var(--rounded-md);
+    padding: 1.5rem;
+
+    @include mixins.breakpoint-up(md) {
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    @include mixins.breakpoint-up(lg) {
+      gap: 2.5rem;
+      padding: 2.5rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin: 0;
+
+      @include mixins.breakpoint-up(md) {
+        max-width: 20rem;
+        text-align: start;
+      }
+
+      @include mixins.breakpoint-up(lg) {
+        max-width: 30rem;
+      }
+    }
+
+    .section-title,
+    .section-subtitle {
+      color: inherit;
+    }
+  }
+
+  &-form {
+    width: 100%;
+    max-width: 32rem;
+    background-color: var(--light);
+    border-radius: var(--rounded-md);
+    padding: 2rem 1rem;
+
+    @include mixins.breakpoint-up(lg) {
+      padding: 3rem;
+    }
+
+    .form-check {
+      text-align: center;
+    }
+  }
+}

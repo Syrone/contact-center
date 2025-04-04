@@ -1,0 +1,110 @@
+@use "mixins" as mixins;
+
+.appeals {
+  padding-top: 7.5rem;
+
+  &-body {
+    display: grid;
+    gap: 1rem;
+
+    @include mixins.breakpoint-up(sm) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    color: #676767;
+    background-color: var(--gray-100);
+    border-radius: var(--rounded-md);
+    padding: 1.5rem;
+
+    @include mixins.breakpoint-up(lg) {
+      padding: 2.5rem;
+    }
+
+    &-title,
+    &-text {
+
+      @include mixins.breakpoint-up(lg) {
+        line-height: 1.4;
+      }
+    }
+
+    &-title {
+      font-size: var(--fs-3xl);
+      color: var(--dark);
+    }
+
+    &-text {
+      font-size: var(--fs-lg);
+      margin-top: .75rem;
+
+      @include mixins.breakpoint-up(lg) {
+        margin-top: 1rem;
+      }
+    }
+
+    picture {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1.5rem;
+
+      @include mixins.breakpoint-up(lg) {
+        margin-top: 2.5rem;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      display: block;
+      object-fit: contain;
+    }
+
+    &:not(:last-child, :nth-last-child(2)) {
+
+      @include mixins.breakpoint-up(sm) {
+        grid-row: span 2;
+      }
+    }
+
+    &:first-child {
+
+      .appeals-card-image {
+        max-width: 15.75rem;
+      }
+    }
+
+    &:nth-child(2) {
+
+      picture {
+        margin-bottom: -1.5rem;
+
+        @include mixins.breakpoint-up(lg) {
+          margin-bottom: -2.5rem;
+        }
+      }
+
+      .appeals-card-image {
+        max-width: 12.5rem;
+      }
+    }
+
+    &:nth-child(3) {
+      .appeals-card-image {
+        max-width: 22.5rem;
+      }
+    }
+
+    &:nth-last-child(2) {
+      background-color: var(--light-cold);
+    }
+
+    &:last-child {
+      background-color: var(--light-mint);
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@use "mixins" as mixins;
+
+.nav {
+  // scss-docs-start nav-css-vars
+  --bs-nav-link-padding-x: 0;
+  --bs-nav-link-padding-y: 0;
+  --bs-nav-link-font-size: var(--fs-base);
+  --bs-nav-link-font-weight: var(--fw-base);
+  --bs-nav-link-color: var(--dark);
+  --bs-nav-link-hover-color: var(--gray-color);
+  // scss-docs-end nav-css-vars
+
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  --_fs: var(--bs-nav-link-font-size);
+  --_fw: var(--bs-nav-link-font-weight);
+  --_color: var(--bs-nav-link-color);
+  --_color-hover: var(--bs-nav-link-hover-color);
+  --_padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+}
+
+//
+// Tabs
+//
+
+.nav-tabs {
+  // scss-docs-start nav-tabs-css-vars
+  --bs-nav-tabs-border-width: 3px;
+  --bs-nav-tabs-border-color: #f4f4f4;
+  --bs-nav-tabs-border-radius: 0;
+  --bs-nav-tabs-link-hover-border-color: transparent;
+  --bs-nav-tabs-link-active-color: var(--dark);
+  --bs-nav-tabs-link-active-bg: transparent;
+  --bs-nav-tabs-link-active-border-color: currentColor;
+  // scss-docs-end nav-tabs-css-vars
+
+  flex-wrap: nowrap;
+  padding-bottom: var(--bs-nav-tabs-border-width);
+  overflow-y: hidden;
+  overflow-x: auto;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: var(--bs-nav-tabs-border-width);
+    display: block;
+    background-color: var(--bs-nav-tabs-border-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .nav-item {
+    flex-shrink: 0;
+
+    &:not(:last-child) {
+      padding-right: 1.5rem;
+
+      @include mixins.breakpoint-up(lg) {
+        padding-right: 2.5rem;
+      }
+    }
+  }
+
+  .nav-link {
+    --_fs: var(--fs-md);
+    --_fw: 600;
+    --_border-width: var(--bs-nav-tabs-border-width);
+    --_rounded: var(--bs-nav-tabs-border-radius);
+    --_border-color-hover: var(--bs-nav-tabs-link-hover-border-color);
+
+    border: none;
+    border-bottom: var(--_border-width) solid var(--_border-color);
+    padding-bottom: 1rem;
+    margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width));
+
+    &:hover,
+    &:focus {
+      isolation: isolate;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: var(--bs-nav-tabs-link-active-color);
+    background-color: var(--bs-nav-tabs-link-active-bg);
+    border-color: var(--bs-nav-tabs-link-active-border-color);
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  margin-top: 2rem;
+
+  @include mixins.breakpoint-up(lg) {
+    margin-top: 2.5rem;
+  }
+
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}

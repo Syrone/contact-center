@@ -1,0 +1,57 @@
+@use "mixins" as mixins;
+
+.footer {
+  padding-bottom: 2.5rem;
+
+  > .container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &-header {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 1rem;
+    border-top: 1px solid #ededed;
+    padding-top: 3rem;
+
+    @include mixins.breakpoint-up(sm) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @include mixins.breakpoint-up(lg) {
+      padding-top: 4rem;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+
+    &-title {
+      font: inherit;
+    }
+
+    &-btn {
+      justify-content: flex-start;
+      text-align: start;
+    }
+
+    &:last-child {
+      grid-column: -1 / 1;
+
+      @include mixins.breakpoint-up(sm) {
+        grid-column: initial;
+      }
+    }
+  }
+
+  &-copy {
+    font-size: .75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}

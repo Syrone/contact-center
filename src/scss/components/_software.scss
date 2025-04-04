@@ -1,0 +1,137 @@
+@use "mixins" as mixins;
+
+.software {
+
+  &-body {
+    display: grid;
+    gap: 1rem;
+
+    @include mixins.breakpoint-up(sm) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  &-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    color: var(--light);
+    background-color: #5690ff;
+    border-radius: var(--rounded-md);
+    padding: 1.5rem;
+
+    @include mixins.breakpoint-up(sm) {
+      grid-column: -1 / 1;
+    }
+
+    @include mixins.breakpoint-up(md) {
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-between;
+    }
+
+    @include mixins.breakpoint-up(lg) {
+      padding: 2.5rem;
+    }
+
+    &-main {
+      max-width: 28rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: center;
+
+      @include mixins.breakpoint-up(md) {
+        align-items: flex-start;
+        text-align: start;
+      }
+    }
+
+    &-info {
+      flex: 1;
+      font-size: var(--fs-lg);
+    }
+
+    &-suptitle {
+      margin-bottom: .25rem;
+
+      @include mixins.breakpoint-up(lg) {
+        margin-bottom: .5rem;
+      }
+    }
+
+    &-title {
+      font-size: var(--fs-5xl);
+    }
+
+    &-text {
+      margin-top: .75rem;
+
+      @include mixins.breakpoint-up(lg) {
+        margin-top: 1rem;
+      }
+    }
+
+    &-picture {
+      max-width: 37.5rem;
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: -1.5rem;
+
+      @include mixins.breakpoint-up(lg) {
+        margin-bottom: -2.5rem;
+      }
+    }
+
+    &-image {
+      display: block;
+      object-fit: contain;
+    }
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray-100);
+    border-radius: var(--rounded-md);
+    padding: 1.5rem;
+
+    @include mixins.breakpoint-up(lg) {
+      padding: 2.5rem;
+    }
+
+    &-title {
+      font-size: var(--fs-3xl);
+      color: var(--dark);
+
+      @include mixins.breakpoint-up(lg) {
+        line-height: 1.4;
+      }
+    }
+
+    picture {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-block: 1.5rem -1.5rem;
+
+      @include mixins.breakpoint-up(lg) {
+        margin-block: 2.5rem -2.5rem;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      max-width: 12.5rem;
+      display: block;
+      object-fit: contain;
+    }
+
+    &:last-child {
+      background-color: var(--light-mint);
+    }
+  }
+}

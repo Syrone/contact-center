@@ -5,8 +5,10 @@ window.addEventListener('load', () => {
     easing: 'ease-in-out',
     offset: 40,
     once: true,
-    disableMutationObserver: true
+    mirror: true,
   })
 
-  setTimeout(() => window.scrollTo(0, 0))
+  setTimeout(() => {
+    window.scrollTo(0, 0)
+  }, 10)
 })

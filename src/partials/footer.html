@@ -1,3 +1,44 @@
 <footer class="footer">
-  <div class="container"></div>
+  <div class="container">
+    <div class="footer-header">
+      <ul class="list-reset footer-nav">
+        @loop('footer-nav.html', [
+          { "text": "О проекте" },
+          { "text": "О проекте" },
+          { "text": "О проекте" },
+          { "text": "О проекте" }
+        ])
+      </ul>
+      <ul class="list-reset footer-nav">
+        @loop('footer-nav.html', [
+          { "text": "О проекте" },
+          { "text": "О проекте" },
+          { "text": "О проекте" },
+          { "text": "О проекте" }
+        ])
+      </ul>
+      <ul class="list-reset footer-nav">
+        <li>
+          <h3 class="footer-nav-title">
+            Заказать звонок
+          </h3>
+        </li>
+        @loop('footer-nav.html', [
+          { "text": "8 (495) 234-45-67" },
+          { "text": "Написать в чат Telegram" }
+        ])
+      </ul>
+    </div>
+
+    <div class="footer-footer">
+      <div class="footer-copy">
+        <div class="footer-copy-title">
+          © Контактный центр 24
+        </div>
+        <div class="footer-copy-text">
+          Мы используем cookies для сбора данных пользователей — эти данные помогают нам настраивать рекламу и анализировать трафик. Оставаясь на сайте, вы соглашаетесь на обработку таких данных. Чтобы отказаться от обработки, отключите сохранение cookies в настройках вашего браузера.
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>

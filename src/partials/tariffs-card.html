@@ -1,0 +1,25 @@
+<div class="tariffs-card">
+  <div class="tariffs-card-tariff">
+    @tariff
+  </div>
+  @if (price1) {
+    <ul class="list-reset tariffs-card-list">
+      <li>
+        @price1
+      </li>
+      @if (price2) {
+        <li>
+          @price2
+        </li>
+      }
+    </ul>
+  }
+  <p class="tariffs-card-text">
+    @text
+  </p>
+  @if (details) {
+    <div class="tariffs-card-details">
+      @details
+    </div>
+  }
+</div>

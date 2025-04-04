@@ -24,7 +24,13 @@
                 </p>
 
                 <button type="button" class="btn btn-lg btn-dark hero-button">
-                  Подключить
+                  Отправить заявку
+
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-right.svg#svg-arrow-right"></use>
+                    </svg>
+                  </span>
                 </button>
               </div>
 
@@ -115,6 +121,221 @@
                   Отслеживаем исполнение, собираем обратную связь, а вам направляем отчеты.
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section appeals">
+          <div class="container">
+            @include('partials/section-header.html', {
+              "title": "Берем на себя всю работу с обращениями ",
+              "subtitle": "Наши диспетчера фиксирую заявки от ваших жителей и передают их в работу."
+            })
+
+            <div class="appeals-body">
+              @loop('partials/appeals-card.html', [
+                { "title": "Принимаем заявки по телефону", "text": "Быстро фиксируем обращения. Контроль на каждом этапе — от звонка до решения.", "image": "image-1" },
+                { "title": "Принимаем обращения через мобильные приложения ", "text": "", "image": "image-2" },
+                { "title": "Чат-боты для жителей ", "text": "Виртуальный помощник для решения вопросов в  сферы ЖКХ.", "image": "image-3" },
+                { "title": "AI - ассистент", "text": "Современный AI - диспетчер на основе технологии GPT корректно примет заявку и передаст в исполнение.", "image": "" },
+                { "title": "Контроль ЕДС  ", "text": "Отслеживаем поступление заявок через сервис единых диспетчерских служб таких как  eds.mosreg.ru и других.", "image": "" }
+              ])
+            </div>
+          </div>
+        </section>
+
+        <section class="section savings">
+          <div class="container">
+            @include('partials/section-header.html', {
+              "title": "Поможем сэкономить время и деньги",
+              "subtitle": ""
+            })
+
+            <div class="savings-body">
+              <div class="savings-main">
+                <div class="savings-info">
+                  <h3 class="savings-info-title">
+                    Сэкономим вам до 2&nbsp;000&nbsp;000&nbsp;Р в год
+                  </h3>
+                  <p class="savings-info-text">
+                    Передавая нам процесс приема и обработки заявок, вы не тратите время на поиск и обучение сотрудников и экономите значительные сретства на ФОТ.
+                  </p>
+
+                </div>
+
+                <button type="button" class="btn btn-lg btn-dark">
+                  Отправить заявку
+
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-right.svg#svg-arrow-right"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+
+              <div class="savings-picture">
+                <picture>
+                  <source srcset="./img/savings/image-1.webp" type="image/webp">
+                  <img loading="lazy" src="./img/savings/image-1.png" class="savings-image" width="" height="" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section software">
+          <div class="container">
+            @include('partials/section-header.html', {
+              "title": "Предоставляем современное ПО",
+              "subtitle": "Автоматизация рутины — вы работаете быстрее и эффективнее."
+            })
+
+            <div class="software-body">
+              <div class="software-banner">
+                <div class="software-banner-main">
+                  <div class="software-banner-info">
+                    <p class="software-banner-suptitle">
+                      Основа автоматизации
+                    </p>
+                    <h3 class="software-banner-title">
+                      CRM-система
+                    </h3>
+
+                    <p class="software-banner-text">
+                      Позволяет отслеживать все процессы и своевременно реагировать на изменения.
+                    </p>
+                  </div>
+
+                  <button type="button" class="btn btn-lg btn-dark">
+                    Отправить заявку
+
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-right.svg#svg-arrow-right"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="software-banner-picture">
+                  <picture>
+                    <source srcset="./img/software/image-1.webp" type="image/webp">
+                    <img loading="lazy" src="./img/software/image-1.png" class="software-banner-image" width="610" height="406" alt="Картинка">
+                  </picture>
+                </div>
+              </div>
+
+              @loop('partials/software-card.html', [
+                { "title": "Мобильное приложение для жителей", "image": "image-2" },
+                { "title": "Мобильное приложение для исполнителей", "image": "image-3" },
+              ])
+            </div>
+          </div>
+        </section>
+
+        <section class="section tariffs">
+          <div class="container">
+            @include('partials/section-header.html', {
+              "title": "Выгодные тарифы",
+              "subtitle": "Действуeт скидка: при покупке на 3 месяца — 10%, на 6 месяцев — 15%, на 12 месяцев — 20%"
+            })
+
+            <div class="tariffs-body">
+              <ul class="nav nav-tabs" role="tablist"
+                id="tab-tariffs">
+                <li class="nav-item" role="presentation">
+                  <button type="button" class="btn nav-link active" role="tab"
+                    id="tab-0"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tab-pane-0"
+                    aria-controls="tab-pane-0"
+                    aria-selected="true">
+                    Тарифы для УК
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button type="button" class="btn nav-link" role="tab"
+                    id="tab-1"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tab-pane-1"
+                    aria-controls="tab-pane-1"
+                    aria-selected="false">
+                    Тарифы для ТСЖ
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="tab-tariffs-content">
+                <div class="tab-pane fade show active" role="tabpanel" tabindex="0"
+                  id="tab-pane-0"
+                  aria-labelledby="tab-0">
+                  <div class="tariffs-main">
+                    @loop('partials/tariffs-card.html', [
+                      { "tariff": "КРУГЛОСУТОЧНЫЙ", "price1": "от 20 000 месяц", "price2": "от 25 500 месяц", "text": "Круглосуточный прием всех заявок.", "details": "500 минут или 200 заявок" },
+                      { "tariff": "НОЧНОЙ", "price1": "от 20 000 месяц", "price2": "", "text": "Круглосуточный прием всех заявок, 500 минут или 200 заявок. Полноценныий контакт-центр, без дополнительных затрат.", "details": "" },
+                      { "tariff": "ИНДИВИДУАЛЬНЫЙ", "price1": "", "price2": "", "text": "Итоговая стоимость рассчитывается исходя из количества лицевых счетов или обслуживаемых объемах в квадратных метрах.", "details": "" },
+                    ])
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" tabindex="0"
+                  id="tab-pane-1"
+                  aria-labelledby="tab-1">
+                  <div class="tariffs-main">
+                    @loop('partials/tariffs-card.html', [
+                      { "tariff": "КРУГЛОСУТОЧНЫЙ", "price1": "от 20 000 месяц", "price2": "от 25 500 месяц", "text": "Круглосуточный прием всех заявок.", "details": "500 минут или 200 заявок" },
+                      { "tariff": "НОЧНОЙ", "price1": "от 20 000 месяц", "price2": "", "text": "Круглосуточный прием всех заявок, 500 минут или 200 заявок. Полноценныий контакт-центр, без дополнительных затрат.", "details": "" },
+                    ])
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section about">
+          <div class="container">
+            @include('partials/section-header.html', {
+              "title": "Почему выбирают нас",
+              "subtitle": "Мы IT-компания, которая работает в сфере ЖКХ больше 10 лет. За это время мы выстроили бесперебойную и отказоустойчивую систему, которая ежедневно помогает управляющим компаниям, ТСЖ и ресурсоснабжающим организациям эффективно решать задачи обслуживания жителей. "
+            })
+
+            <div class="about-body">
+              @loop('partials/about-card.html', [
+                { "title": "15 лет", "text": "На рынке" },
+                { "title": "100+", "text": "Управляющих компаний" },
+                { "title": "25", "text": "Регионов обслуживания" }
+              ])
+            </div>
+          </div>
+        </section>
+
+        <section class="section callback">
+          <div class="container">
+            <div class="callback-body">
+              @include('partials/section-header.html', {
+                "title": "Оставьте заявку",
+                "subtitle": "Наш менеджер свяжется с вами, ответит на все вопросы и предоставит демо-доступ к системе."
+              })
+
+              <form class="callback-form">
+                @loop('partials/field.html', [
+                  { "type": "text", "name": "name", "placeholder": "Имя" },
+                  { "type": "email", "name": "email", "placeholder": "Электронная почта" },
+                  { "type": "tel", "name": "tel", "placeholder": "Номер телефона" },
+                  { "type": "text", "name": "organization", "placeholder": "Название организации или ИНН" },
+                ])
+
+                <button type="button" class="btn btn-lg btn-dark btn-submit">
+                  Отправить заявку
+                </button>
+
+                <label class="form-check">
+                  <input type="checkbox" class="form-check-input" name="policy" required>
+                  <span class="form-check-label">
+                    Соглашаюсь на <a href="#" class="btn btn-link btn-inherit">обработку персональных данных</a>
+                  </span>
+                </label>
+              </form>
             </div>
           </div>
         </section>

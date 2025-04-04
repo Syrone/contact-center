@@ -1,0 +1,17 @@
+<div class="appeals-card">
+  <h3 class="appeals-card-title">
+    @title
+  </h3>
+  @if (text) {
+    <p class="appeals-card-text">
+      @text
+    </p>
+  }
+
+  @if (image) {
+    <picture>
+      <source srcset="./img/appeals/@image.webp" type="image/webp">
+      <img loading="lazy" src="./img/appeals/@image.png" class="appeals-card-image" alt="Картинка">
+    </picture>
+  }
+</div>
