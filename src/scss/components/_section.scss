@@ -27,15 +27,15 @@
 		line-height: 1.1;
 
 		+ .section-subtitle {
-			margin-top: 1.5rem;
+			margin-top: .75rem;
 
       @include mixins.breakpoint-up(lg) {
-        margin-top: 2rem;
+        margin-top: 1.25rem;
       }
 		}
 	}
 
 	&-subtitle {
-		font-size: var(--fs-xl);
+		font-size: var(--fs-md);
 	}
 }

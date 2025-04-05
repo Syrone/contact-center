@@ -8,9 +8,9 @@
   --fs-md: 1rem;
   --fs-lg: 1rem;
   --fs-xl: 1.25rem;
-  --fs-3xl: 1.75rem;
+  --fs-3xl: 1.25rem;
   --fs-5xl: 2.25rem;
-  --fs-h2: 2.5rem;
+  --fs-h2: 2.25rem;
   --fw-base: 400;
   --lh-base: normal;
   --title-color: #000;
@@ -40,7 +40,7 @@
     --fs-xl: 1.5rem;
     --fs-3xl: 2rem;
     --fs-5xl: 3rem;
-    --fs-h2: 3.75rem;
+    --fs-h2: 2.625rem;
     --rounded: 1rem;
     --rounded-md: 1.25rem;
   }
@@ -115,15 +115,6 @@
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-}
-
-[data-animation] {
-  visibility: hidden;
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 img {
@@ -248,15 +239,15 @@ p + p {
   line-height: 1.1;
 }
 .section-title + .section-subtitle {
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
 }
 @media (min-width: 991.98px) {
   .section-title + .section-subtitle {
-    margin-top: 2rem;
+    margin-top: 1.25rem;
   }
 }
 .section-subtitle {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-md);
 }
 
 .icon {
@@ -1232,7 +1223,7 @@ textarea {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-size: var(--fs-lg);
+  font-size: var(--fs-md);
 }
 .software-banner-suptitle {
   margin-bottom: 0.25rem;
