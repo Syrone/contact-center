@@ -1387,6 +1387,10 @@ textarea {
     gap: 0.25rem;
   }
 }
+.tariffs-card-list > li:nth-child(2) {
+  color: var(--gray);
+  text-decoration: line-through;
+}
 .tariffs-card:first-child {
   background-color: var(--light-cold);
 }
@@ -1793,6 +1797,7 @@ textarea {
   border-bottom: var(--_border-width) solid var(--_border-color);
   padding-bottom: 1rem;
   margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width));
+  -webkit-tap-highlight-color: transparent;
 }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
   isolation: isolate;

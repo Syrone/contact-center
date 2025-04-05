@@ -54,6 +54,14 @@
       @include mixins.breakpoint-up(lg) {
         gap: .25rem;
       }
+
+      > li {
+
+        &:nth-child(2) {
+          color: var(--gray);
+          text-decoration: line-through;
+        }
+      }
     }
 
     &:first-child {

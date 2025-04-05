@@ -82,6 +82,7 @@
     border-bottom: var(--_border-width) solid var(--_border-color);
     padding-bottom: 1rem;
     margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width));
+    -webkit-tap-highlight-color: transparent;
 
     &:hover,
     &:focus {
