@@ -80,14 +80,25 @@
       align-items: flex-end;
       margin-bottom: -1.5rem;
 
+      @include mixins.breakpoint-up(md) {
+        margin-right: -1.5rem;
+      }
+
       @include mixins.breakpoint-up(lg) {
         margin-bottom: -2.5rem;
+        margin-right: -2.5rem;
       }
     }
 
     &-image {
       display: block;
       object-fit: contain;
+      border-top-right-radius: var(--rounded-md);
+      border-top-left-radius: var(--rounded-md);
+
+      @include mixins.breakpoint-up(md) {
+        border-bottom-right-radius: var(--rounded-md);
+      }
     }
   }
 
@@ -114,7 +125,7 @@
     picture {
       flex: 1;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
       margin-block: 1.5rem -1.5rem;
 
@@ -125,7 +136,7 @@
 
     &-image {
       width: 100%;
-      max-width: 12.5rem;
+      max-width: 16.25rem;
       display: block;
       object-fit: contain;
     }

@@ -1038,7 +1038,7 @@ textarea {
   }
 }
 .appeals-card:nth-child(2) .appeals-card-image {
-  max-width: 12.5rem;
+  max-width: 16.25rem;
 }
 .appeals-card:nth-child(3) .appeals-card-image {
   max-width: 22.5rem;
@@ -1271,15 +1271,28 @@ textarea {
   align-items: flex-end;
   margin-bottom: -1.5rem;
 }
+@media (min-width: 767.98px) {
+  .software-banner-picture {
+    margin-right: -1.5rem;
+  }
+}
 @media (min-width: 991.98px) {
   .software-banner-picture {
     margin-bottom: -2.5rem;
+    margin-right: -2.5rem;
   }
 }
 .software-banner-image {
   display: block;
   -o-object-fit: contain;
   object-fit: contain;
+  border-top-right-radius: var(--rounded-md);
+  border-top-left-radius: var(--rounded-md);
+}
+@media (min-width: 767.98px) {
+  .software-banner-image {
+    border-bottom-right-radius: var(--rounded-md);
+  }
 }
 .software-card {
   display: -webkit-box;
@@ -1314,9 +1327,9 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1329,7 +1342,7 @@ textarea {
 }
 .software-card-image {
   width: 100%;
-  max-width: 12.5rem;
+  max-width: 16.25rem;
   display: block;
   -o-object-fit: contain;
   object-fit: contain;
