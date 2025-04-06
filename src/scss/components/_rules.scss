@@ -8,12 +8,12 @@
   &-main {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 2.125rem;
   }
 
   &-title {
     font-size: var(--fs-lg);
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
   }
 

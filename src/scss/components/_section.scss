@@ -12,7 +12,7 @@
 		margin-bottom: 3rem;
 
 		@include mixins.breakpoint-up(lg) {
-			margin-bottom: 4rem;
+			margin-bottom: 5rem;
 		}
 	}
 
@@ -30,12 +30,12 @@
 			margin-top: .75rem;
 
       @include mixins.breakpoint-up(lg) {
-        margin-top: 1.25rem;
+        margin-top: 2.25rem;
       }
 		}
 	}
 
 	&-subtitle {
-		font-size: var(--fs-md);
+		font-size: var(--fs-lg);
 	}
 }

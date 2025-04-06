@@ -3,7 +3,7 @@
 .hero {
   color: var(--light);
   background-color: var(--secondary);
-  padding-top: 5rem;
+  padding-block: 5rem 12.5rem;
 
   &-body {
     display: flex;
@@ -42,11 +42,16 @@
 
   &-description {
     font-size: var(--fs-xl);
+    font-weight: 300;
     opacity: .9;
   }
 
   &-relative {
     position: relative;
+
+    @include mixins.breakpoint-up(xl) {
+      margin-right: 5rem;
+    }
   }
 
   &-picture {
@@ -57,6 +62,10 @@
     border-radius: 1.25rem;
     overflow: hidden;
     position: relative;
+
+    @include mixins.breakpoint-up(xl) {
+      aspect-ratio: 3 / 3.5;
+    }
 
     @include mixins.breakpoint-up(lg) {
       max-width: 22.5rem;

@@ -49,7 +49,8 @@
       display: flex;
       flex-direction: column;
       gap: .125rem;
-      font-size: var(--fs-3xl);
+      font-size: var(--fs-2xl);
+      font-weight: 500;
 
       @include mixins.breakpoint-up(lg) {
         gap: .25rem;

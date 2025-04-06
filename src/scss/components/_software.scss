@@ -70,7 +70,7 @@
       margin-top: .75rem;
 
       @include mixins.breakpoint-up(lg) {
-        margin-top: 1rem;
+        margin-top: 1.125rem;
       }
     }
 
@@ -103,7 +103,7 @@
     }
 
     &-title {
-      font-size: var(--fs-3xl);
+      font-size: var(--fs-2xl);
       color: var(--dark);
 
       @include mixins.breakpoint-up(lg) {
